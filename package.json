@@ -1,0 +1,36 @@
+{
+  "name": "nim-document-research-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:push": "prisma db push",
+    "eval:rag": "node --import tsx scripts/eval-rag.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "@qdrant/js-client-rest": "^1.14.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.511.0",
+    "next": "^15.3.2",
+    "pdfjs-dist": "^5.7.284",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.19",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "eslint": "^9.27.0",
+    "eslint-config-next": "^15.3.2",
+    "prisma": "^6.8.2",
+    "tsx": "^4.22.3",
+    "typescript": "^5.8.3"
+  }
+}

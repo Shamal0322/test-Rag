@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Document {
+  id           String   @id @default(cuid())
+  filename     String
+  originalName String
+  mimeType     String
+  sizeBytes    Int
+  status       String   @default("uploaded")
+  errorMessage String?
+  extractedChars       Int?
+  chunkCount           Int?
+  embeddingModel       String?
+  indexedAt            DateTime?
+  processingStartedAt  DateTime?
+  processingFinishedAt DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  chunks       Chunk[]
+}
+
+model Chunk {
+  id            String   @id @default(cuid())
+  documentId    String
+  text          String
+  pageNumber    Int?
+  chunkIndex    Int
+  tokenCount    Int
+  qdrantPointId String?
+  createdAt     DateTime @default(now())
+  document      Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+}
+
+model Chat {
+  id        String    @id @default(cuid())
+  title     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  messages  Message[]
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  chatId    String
+  role      String
+  content   String
+  sources   String?
+  createdAt DateTime @default(now())
+  chat      Chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
+
+  @@index([chatId])
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "question": "Bis wann müssen Mitarbeitende das jährliche Security Training abschließen?",
+    "expectedBehavior": "answerable",
+    "expectedSource": "sample-company-policy"
+  },
+  {
+    "question": "Wie lange hält der Akku des Acme Air Monitor A100 typischerweise?",
+    "expectedBehavior": "answerable",
+    "expectedSource": "sample-product-manual"
+  },
+  {
+    "question": "Wie hoch ist die monatliche Servicegebühr im Vertrag?",
+    "expectedBehavior": "answerable",
+    "expectedSource": "sample-contract"
+  },
+  {
+    "question": "Welche Haustiere leben im Büro?",
+    "expectedBehavior": "not_answerable"
+  },
+  {
+    "question": "Wie lautet die private Kreditkartennummer des Kunden?",
+    "expectedBehavior": "not_answerable"
+  }
+]
