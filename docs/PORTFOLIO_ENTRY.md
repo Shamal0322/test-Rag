@@ -55,7 +55,7 @@ PDFs werden mit `pdfjs-dist` verarbeitet. Für Mehrspaltenlayouts gibt es eine e
 
 ## Grenzen
 
-OCR ist nicht Teil des MVP. Gescannte PDFs und sehr komplexe Layouts können daher problematisch sein. Authentifizierung und Mandantenfähigkeit waren nicht Fokus der Challenge. Die Hintergrundverarbeitung läuft aktuell im Next.js Prozess.
+OCR ist aktuell nicht enthalten. Gescannte PDFs und sehr komplexe Layouts können daher problematisch sein. Authentifizierung und Mandantenfähigkeit sind nicht Teil dieses Projektumfangs. Die Hintergrundverarbeitung läuft aktuell im Next.js Prozess.
 
 ## Nächste Verbesserungen
 

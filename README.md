@@ -156,11 +156,12 @@ Die API gibt Debug-Metadaten wie `retrievedCount`, `afterDedupeCount`, `finalCon
 
 ```bash
 npm install
-cp .env.example .env
 npm run prisma:push
 docker compose up -d qdrant
 npm run dev
 ```
+
+Die Datei `.env` ist als leere lokale Konfiguration im Repository enthalten. Vor dem Start muss mindestens `NVIDIA_API_KEY` gesetzt werden.
 
 Die App läuft unter:
 
@@ -253,11 +254,11 @@ Das Script läuft gegen eine lokal gestartete App. Es prüft:
 
 Das Script erzeugt keine erfundenen Ergebnisse. Wenn App oder Dokumente fehlen, schlägt es nachvollziehbar fehl.
 
-## Known Limitations
+## Current Scope
 
-- OCR ist nicht Teil des MVP.
+- OCR ist aktuell nicht enthalten.
 - Gescannten PDFs können nicht zuverlässig verarbeitet werden.
-- Authentifizierung war nicht Fokus der Challenge.
+- Authentifizierung und Multi-User-Support sind nicht Teil dieses Projektumfangs.
 - PDF Parsing bleibt bei komplexen Layouts ein Risiko.
 - Hintergrundverarbeitung läuft im Next.js Prozess, nicht in einer Worker Queue.
 - Confidence Thresholds sind pragmatisch und sollten mit einem größeren Evaluationsset kalibriert werden.

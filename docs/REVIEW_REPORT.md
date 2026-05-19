@@ -65,13 +65,13 @@ Not verified in this document. Requires local environment with valid NVIDIA API 
 - OCR ist nicht implementiert.
 - NVIDIA NIM kann Rate Limits oder temporäre 500er Fehler liefern.
 - Hintergrundverarbeitung läuft im Next.js Prozess.
-- SQLite und lokaler Upload Storage sind für Challenge und Portfolio geeignet, aber nicht für hohe Produktionslast.
+- SQLite und lokaler Upload Storage sind für Demo- und Portfolio-Nutzung geeignet, aber nicht für hohe Produktionslast.
 - Confidence Thresholds sind pragmatisch und sollten mit Golden Questions kalibriert werden.
 
 ## Manual Test Checklist
 
-1. `.env` aus `.env.example` erstellen.
-2. `NVIDIA_API_KEY` und `NVIDIA_LLM_MODEL` setzen.
+1. `NVIDIA_API_KEY` in der vorhandenen `.env` setzen.
+2. Optional `NVIDIA_LLM_MODEL` prüfen oder anpassen.
 3. `docker compose up -d qdrant` ausführen.
 4. `npm run dev` starten.
 5. Demo-Dokumente aus `demo/documents` hochladen.

@@ -84,7 +84,7 @@ Der Chunker nutzt konfigurierbare RAG Parameter aus `src/lib/rag/config.ts`:
 
 Der Chunker normalisiert Leerzeichen, erkennt Absätze und erhält Überschriften als Teil der folgenden Informationseinheit, soweit die PDF Extraktion sie als Zeilen liefert. Er schließt Chunks bevorzugt an Absatzenden, danach an Satzgrenzen und erst zuletzt an Zeichenpositionen. Chunks unter dem Minimum werden nach Möglichkeit mit vorherigem oder folgendem Text zusammengeführt.
 
-Overlap wird aus dem Ende des vorherigen Chunks gebildet und startet möglichst an Absatz-, Satz- oder Wortgrenzen. Die Tokenzahl wird geschätzt. Das reicht für dieses MVP, weil der Embedding Client mit kleinen Einzelrequests arbeitet.
+Overlap wird aus dem Ende des vorherigen Chunks gebildet und startet möglichst an Absatz-, Satz- oder Wortgrenzen. Die Tokenzahl wird geschätzt. Das reicht für diesen Projektumfang, weil der Embedding Client mit kleinen Einzelrequests arbeitet.
 
 Mehr Chunks in Qdrant sind gewünscht, solange die Context Selection den Prompt klein hält.
 
